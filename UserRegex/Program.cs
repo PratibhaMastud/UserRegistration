@@ -19,7 +19,7 @@ namespace UserRegex
                 }
                 else
                 {
-                    Console.WriteLine("Password should have 1 capital latter");
+                    Console.WriteLine("Password should have 1 Numeric Number");
                 }
             }
         }
