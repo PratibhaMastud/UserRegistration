@@ -14,14 +14,14 @@ namespace UserRegex
                 Boolean output = UserRegistration.regexPhoneNumber(phoneNumber);
                 if (output == true)
                 {
-                    Console.WriteLine("Valid phone Number");
+                    Console.WriteLine("Mobile number is correct");
                     i = 1;
                 }
                 else
                 {
                     Console.WriteLine("Enter phone Number in format");
                 }
-            }
-        }
+             }
+         }
     }
 }
