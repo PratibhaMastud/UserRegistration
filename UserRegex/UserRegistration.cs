@@ -7,11 +7,11 @@ namespace UserRegex
 {
     class UserRegistration
     {
-        public static bool regexEmail(string email)
+        public static bool regexMobileNo(string mobileNo)
         {
-            String namePattern = "^([a-z]{3,})([.]{0,1}[a-z]*)@([a-z]{2}).([a-z]{2})([.]{1}[a-z]{2}){0,1}$";
-            Regex obj = new Regex(namePattern);
-            return obj.IsMatch(email);
+            string mobileExpression = "([+][9]{1}[1]{1}[ ])?[6-9]{1}[0-9]{9}";
+            Regex rg = new Regex(mobileExpression);
+            return rg.IsMatch(mobileNo);
         }
     }
 }
