@@ -9,20 +9,19 @@ namespace UserRegex
             int i = 0;
             while (i != 1)
             {
-                Console.WriteLine("Enter mobile number");
-                string mobNo = Console.ReadLine();
-                Boolean output = UserRegistration.regexMobileNo(mobNo);
+                Console.WriteLine("Enter phoneNumber");
+                string phoneNumber = Console.ReadLine();
+                Boolean output = UserRegistration.regexPhoneNumber(phoneNumber);
                 if (output == true)
                 {
-                    Console.WriteLine("Mobile number correct");
+                    Console.WriteLine("Mobile number is correct");
                     i = 1;
                 }
                 else
                 {
-                    Console.WriteLine("Enter mobile number in this format : 91 9987984567");
+                    Console.WriteLine("Enter phone Number in format");
                 }
-            }
-
-        }
+             }
+         }
     }
 }
