@@ -19,7 +19,7 @@ namespace UserRegex
                 }
                 else
                 {
-                    Console.WriteLine("Enter minimum eight character");
+                    Console.WriteLine("Password should have 1 capital latter");
                 }
             }
         }

@@ -9,7 +9,7 @@ namespace UserRegex
     {
         public static bool regexPassword(string pass)
         {
-            string namePattern = "[a-zA-z]{8,}";//Rule:1
+            string namePattern = "[A-Z]{1}";//Rule:2
             Regex obj = new Regex(namePattern);
             return obj.IsMatch(pass);
         }
