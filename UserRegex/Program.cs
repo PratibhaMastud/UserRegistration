@@ -9,17 +9,17 @@ namespace UserRegex
             int i = 0;
             while (i != 1)
             {
-                Console.WriteLine("Enter phoneNumber");
-                string phoneNumber = Console.ReadLine();
-                Boolean output = UserRegistration.regexPhoneNumber(phoneNumber);
+                Console.WriteLine("Enter Password");
+                string pass = Console.ReadLine();
+                Boolean output = UserRegistration.regexPassword(pass);
                 if (output == true)
                 {
-                    Console.WriteLine("Valid phone Number");
+                    Console.WriteLine("Valid Password");
                     i = 1;
                 }
                 else
                 {
-                    Console.WriteLine("Enter phone Number in format");
+                    Console.WriteLine("Enter minimum eight character");
                 }
             }
         }
