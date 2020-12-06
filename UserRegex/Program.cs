@@ -19,7 +19,7 @@ namespace UserRegex
                 }
                 else
                 {
-                    Console.WriteLine("Password should have one Numeric Number");
+                    Console.WriteLine("Password should have one special character");
                 }
             }
         }
