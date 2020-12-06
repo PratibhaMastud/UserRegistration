@@ -21,7 +21,7 @@ namespace UserRegex
                 {
                     Console.WriteLine("Password should have one special character");
                 }
-            }
-        }
+             }
+         }
     }
 }
