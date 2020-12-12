@@ -7,11 +7,11 @@ namespace UserRegex
 {
     class UserRegistration
     {
-        public static bool regexPassword(string pass)
+        public bool regexEmail(string email)
         {
-            string namePattern = "[@#$%^&+=]{1}";//Rule:2
-            Regex obj = new Regex(namePattern);
-            return obj.IsMatch(pass);
+            String emailPattern = "^([A-Za-z\\d-_\\+]+)(\\.[A-Za-z\\d-_]+)?@([a-zA-Z\\d]+)\\.([a-zA-Z]{2,4})(\\.[A-Za-z]{2,4})?$";
+            Regex obj = new Regex(emailPattern);
+            return obj.IsMatch(email);
         }
     }
 }
