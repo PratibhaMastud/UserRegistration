@@ -6,7 +6,7 @@ namespace UserRegex
     {
         static void Main(string[] args)
         {
-			int index1 = 0;
+  			int index1 = 0;
 
 			// ASSIGING SOME VALID SAMPLES
 			string[] validEmailSample = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com",
@@ -34,5 +34,5 @@ namespace UserRegex
 			}
 		}
 	}
-}
-
+           
+   
