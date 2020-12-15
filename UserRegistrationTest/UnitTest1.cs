@@ -9,9 +9,14 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenFirstNameShouldReturnHappy()
         {
-            bool expected = true;
-            bool output = UserRegistration.UserRegister.validateFirstName("Prati");
-            Assert.AreEqual(expected, output);
+            try
+            {
+                bool output = UserRegistration.UserRegister.validateFirstName("Prati");
+            }
+            catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid First Name,Name should be first letter capital", ue.Message);
+            }
         }
 
         /// <summary>
@@ -20,9 +25,16 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenLastNameShouldReturnHappy()
         {
-            bool expected = true;
-            bool output = UserRegistration.UserRegister.validateLastName("Mastud");
-            Assert.AreEqual(expected, output);
+            try
+            {
+                bool output = UserRegistration.UserRegister.validateLastName("Mastud");
+
+            }
+            catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid Last Name,Name should be first letter capital", ue.Message);
+
+            }
         }
 
         /// <summary>
@@ -31,9 +43,14 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenValidEmailIdShouldReturnHappy()
         {
-            bool expected = true;
-            bool output = UserRegistration.UserRegister.validateEmail("pratimastakki95@gmail.com");
-            Assert.AreEqual(expected, output);
+            try
+            {
+                bool output = UserRegistration.UserRegister.validateEmail("pratimastakki95@gmail.com");
+            }
+            catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid Email", ue.Message);
+            }
         }
 
 
@@ -43,9 +60,14 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenValidMobileShouldReturnHappy()
         {
-            bool expected = true;
-            bool output = UserRegistration.UserRegister.validateMobileNo("91 9987936482");
-            Assert.AreEqual(expected, output);
+            try
+            {
+                bool output = UserRegistration.UserRegister.validateMobileNo("91 9987936482");
+            } catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid Mobile number,number should be predefined format", ue.Message);
+
+            }
         }
 
         /// <summary>
@@ -54,9 +76,14 @@ namespace UserRegistrationTest
         [TestMethod]
         public void GivenValidPasswordShouldReturnHappy()
         {
-            bool expected = true;
-            bool output = UserRegistration.UserRegister.validatePassword("Prati@123");
-            Assert.AreEqual(expected, output);
+            try
+            {
+                bool output = UserRegistration.UserRegister.validatePassword("Prati@123");
+            }
+            catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid Password,Password should be in format", ue.Message);
+            }
         }
 
         /// <summary>
@@ -75,9 +102,14 @@ namespace UserRegistrationTest
         [DataRow("abc+100@gmail.com")]
         public void GivenValidEmailListShouldReturnsTrue(string email)
         {
-            bool expected = true;
-            var result = UserRegistration.UserRegister.validateEmailList(email);
-            Assert.AreEqual(expected, result);
+            try
+            {
+                var result = UserRegistration.UserRegister.validateEmailList(email);
+            }
+            catch (UserRegistrationException ue)
+            {
+                Assert.AreEqual("Invalid Email.Email should be in format", ue.Message);
+            }
         }
     }
 }
