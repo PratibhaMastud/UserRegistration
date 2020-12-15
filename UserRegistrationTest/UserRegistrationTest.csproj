@@ -14,7 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\UserRegistration\UserRegistration\UserRegistration.csproj" />
+=======
+    <ProjectReference Include="..\UserRegex\UserRegistrationProject.csproj" />
+>>>>>>> 5662719d663a56cbcc813c27ccf1f615ee98a5b2
   </ItemGroup>
 
 </Project>
